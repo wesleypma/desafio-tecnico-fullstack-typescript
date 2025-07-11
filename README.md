@@ -67,14 +67,6 @@ DATABASE_URL="postgresql://
 postgres:SENHA@localhost:5432/BANCO?schema=public"
 JWT_SECRET="sua_chave_jwt"
 
-- A Estrutura do Projeto no backend ficará assim
-
-|-- backend
-| |-- prisma/
-| |-- scripts/hashPassword.ts
-| |-- src/
-| |-- .env
-
 5. Gerar o Prisma Client
 
 npx prisma generate
@@ -114,17 +106,6 @@ npm install
 2. Rodar frontend
 
 npm run dev
-
-- A Estrutura final do projeto ficará assim
-
-|-- backend
-| |-- prisma/
-| |-- scripts/hashPassword.ts
-| |-- src/
-| |-- .env  
-|-- frontend
-| |-- src/
-|-- README.md
 
 # Documentação da API
 
