@@ -56,15 +56,17 @@ npx prisma migrate dev --name init
 -- Esse comando executa as migrations já preparadas no projeto e cria as tabelas no PostgreSQL automaticamente, inclusive visíveis no PgAdmin
 
 3. Instalar dependências do backend
+
    cd backend
    npm install
 
 4. Criar arquivo .env
 
-- Crie um .env na raiz do backend com base em
+- Crie um arquivo .env na raiz do backend com base em
 
 DATABASE_URL="postgresql://
-postgres:SENHA@localhost:5432/BANCO?schema=public"
+postgres:SENHA@localhost:PORTA/NOME_BANCO?schema=public"
+
 JWT_SECRET="sua_chave_jwt"
 
 5. Gerar o Prisma Client
@@ -73,9 +75,10 @@ npx prisma generate
 
 6. Criar usuário admin para login
 
--- No diretório 'backend', rode o comando para gerar a senha
+-- No diretório 'backend' rode o comando para gerar a senha
 
 npx ts-node src/scripts/hashPassword.ts
+
 --- (Se der erro, use npm install -D ts-node)
 
 -- Depois no VALUES, preencha o email, e a senha gerada pelo script acima
@@ -101,6 +104,7 @@ Frontend (React + Vite)
 1. Instalar dependências do frontend
 
 cd ../frontend
+
 npm install
 
 2. Rodar frontend
