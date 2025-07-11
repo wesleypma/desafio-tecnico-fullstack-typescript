@@ -87,7 +87,7 @@ VALUES (
 );
 
 - Esse script insere:
-  - Email: admin@igreen.com
+  - Email: admin@admin.com
   - Senha: hash_bcrypt(123456)
 
 7. Rodar o servidor backend
